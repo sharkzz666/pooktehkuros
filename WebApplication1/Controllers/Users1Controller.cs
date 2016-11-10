@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using WebApplication1.Models.DB;
 using WebApplication1.Models;
 using PagedList;
-
+using System.Web.UI.WebControls;
 
 namespace WebApplication1.Controllers
 {
@@ -62,6 +62,8 @@ namespace WebApplication1.Controllers
             return View(tableuser.ToPagedList(PageNumber, pageSize));
 
         }
+      
+
 
         public ActionResult SearchIndex1(string sortOrder, string searchstring, string currentfilter, int? page)
         {
