@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "requestphonebook";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Request Book</legend>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.phonebook)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.BookName)
+            @Html.ValidationMessageFor(m => m.BookName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.ZipCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.ZipCode)
+            @Html.ValidationMessageFor(m => m.ZipCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.ContactName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.ContactName)
+            @Html.ValidationMessageFor(m => m.ContactName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.BookDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.BookDescription)
+            @Html.ValidationMessageFor(m => m.BookDescription)
+        </div>
+
+        <input type="submit" value="Request Book" />
+    </fieldset>
+} 
